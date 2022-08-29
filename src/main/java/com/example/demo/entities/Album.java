@@ -1,4 +1,5 @@
-package com.example.demo.album;
+package com.example.demo.entities;
+
 
 public class Album {
     private int userId;

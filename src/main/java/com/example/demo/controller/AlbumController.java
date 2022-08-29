@@ -1,7 +1,11 @@
-package com.example.demo.album;
+package com.example.demo.controller;
 
+import com.example.demo.service.IAlbumService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.io.IOException;
 
 @Controller
 public class AlbumController {
@@ -12,7 +16,8 @@ public class AlbumController {
     }
 
     @RequestMapping("/album")
-    public String FindAlbums() {
+    public String FindAlbums(Model model) throws IOException {
+        model.addAttribute("albums", albumService.findAlbums());
         return "album";
     }
 
