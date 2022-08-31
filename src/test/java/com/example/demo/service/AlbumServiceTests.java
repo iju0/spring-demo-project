@@ -4,9 +4,11 @@ import com.example.demo.infra.api.JSONPlaceholderAPI;
 import com.example.demo.repositories.AlbumRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
 
+@SpringBootTest
 public class AlbumServiceTests {
 
     private JSONPlaceholderAPI jsonPlaceholderAPI;
